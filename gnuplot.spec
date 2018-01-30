@@ -3,7 +3,7 @@
 Summary:	A program for plotting mathematical expressions and data
 Name:		gnuplot
 Version:	5.2.2
-Release:	1
+Release:	2
 License:	Freeware-like
 Group:		Sciences/Other
 Url:		http://www.gnuplot.info/
@@ -20,8 +20,10 @@ BuildRequires:  texinfo
 BuildRequires:	texlive-epstopdf
 BuildRequires:	tetex-latex
 BuildRequires:	latex-picins
+BuildRequires:	latex2html
 BuildRequires:	texlive-latex-bin
 BuildRequires:  gd-devel
+BuildRequires:  giflib-devel
 BuildRequires:	readline-devel
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Gui)
@@ -30,6 +32,8 @@ BuildRequires:  pkgconfig(cairo)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(lua)
 BuildRequires:	pkgconfig(ncurses)
+BuildRequires:	pkgconfig(libotf)
+BuildRequires:	pkgconfig(pango)
 BuildRequires:	pkgconfig(x11)
 Requires:	gnuplot-nox
 Suggests:	gnuplot-mode
