@@ -37,6 +37,7 @@ BuildRequires:	pkgconfig(lua)
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(libotf)
 BuildRequires:	pkgconfig(pango)
+BuildRequires:	pkgconfig(pangocairo)
 BuildRequires:	pkgconfig(x11)
 Requires:	gnuplot-nox
 Suggests:	gnuplot-mode
