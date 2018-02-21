@@ -117,8 +117,8 @@ pushd build-nox
 	--with-png \
 	--without-linux-vga \
 	--without-x \
-	--disable-wxwidgets \
-	--disable-qt
+	--disable-wxwidgets
+
 %make -C src/
 # building docs with parallel make
 # fails on a 32-thread box
@@ -132,7 +132,7 @@ pushd build-x11
 	--with-png \
 	--without-linux-vga \
 	--disable-wxwidgets \
-	--enable-qt
+	--with-qt=qt5
 %make
 popd
 
