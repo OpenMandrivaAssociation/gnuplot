@@ -25,6 +25,7 @@ BuildRequires:	texlive-latex-bin
 BuildRequires:  gd-devel
 BuildRequires:  giflib-devel
 BuildRequires:	readline-devel
+BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Widgets)
