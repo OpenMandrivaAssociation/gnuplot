@@ -120,7 +120,8 @@ pushd build-nox
 	--with-png \
 	--without-linux-vga \
 	--without-x \
-	--disable-wxwidgets
+	--disable-wxwidgets \
+	--without-qt
 
 %make -C src/
 # building docs with parallel make
