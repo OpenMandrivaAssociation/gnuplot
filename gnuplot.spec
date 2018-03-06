@@ -41,6 +41,8 @@ BuildRequires:	pkgconfig(pango)
 BuildRequires:	pkgconfig(pangocairo)
 BuildRequires:	pkgconfig(x11)
 Requires:	gnuplot-nox
+Requires(post): texlive-kpathsea.bin
+Requires(postun):texlive-kpathsea.bin
 Suggests:	gnuplot-mode
 Suggests:	gnuplot-doc
 
@@ -199,9 +201,11 @@ install -m644 %{SOURCE13} -D %{buildroot}%{_liconsdir}/%{name}.png
 cd %{buildroot}%{_datadir}
 mv texmf-local texmf-dist
 
-%post -p %{_bindir}/texhash
+%post
+%{_bindir}/texhash
 
-%postun -p %{_bindir}/texhash
+%postun
+%{_bindir}/texhash
 
 %files
 %{_bindir}/gnuplot
