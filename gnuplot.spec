@@ -113,6 +113,7 @@ rm -f demo/prob.dem demo/prob2.dem
 
 %build
 export CFLAGS="%{optflags} -fno-fast-math"
+export CXXFLAGS="%{optflags} -std=gnu++11"
 export CONFIGURE_TOP=..
 
 mkdir build-nox
