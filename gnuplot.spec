@@ -129,7 +129,7 @@ pushd build-nox
 %make_build -C src/
 # building docs with parallel make
 # fails on a 32-thread box
-make_build -C docs/ pdf
+%make_build -j1 -C docs/ pdf
 popd
 
 mkdir build-x11
