@@ -40,6 +40,7 @@ BuildRequires:	pkgconfig(libotf)
 BuildRequires:	pkgconfig(pango)
 BuildRequires:	pkgconfig(pangocairo)
 BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(gdlib)
 Requires:	gnuplot-nox
 Suggests:	gnuplot-mode
 Suggests:	gnuplot-doc
@@ -105,7 +106,7 @@ This package provides the additional documentation.
 
 %prep
 %setup -q -a 1
-%apply_patches
+%autopatch -p1
 
 perl -pi -e 's|(^\s*)mkinstalldirs\s|$1./mkinstalldirs |' gnuplot-mode.%{modeversion}/Makefile.in
 # Non-free stuff. Ouch. -- Geoff
@@ -125,10 +126,10 @@ pushd build-nox
 	--disable-wxwidgets \
 	--without-qt
 
-%make -C src/
+%make_build -C src/
 # building docs with parallel make
 # fails on a 32-thread box
-make -C docs/ pdf
+make_build -C docs/ pdf
 popd
 
 mkdir build-x11
@@ -139,12 +140,12 @@ pushd build-x11
 	--without-linux-vga \
 	--disable-wxwidgets \
 	--with-qt=qt5
-%make
+%make_build
 popd
 
 pushd gnuplot-mode.%{modeversion} && {
     ./configure --prefix=/usr
-    %make
+    %make_build
 } && popd
 
 cp -f %SOURCE2 .
@@ -152,12 +153,12 @@ chmod 644 faq.html
 
 %install
 pushd build-nox
-%makeinstall_std
+%make_install
 mv %{buildroot}%{_bindir}/gnuplot %{buildroot}%{_bindir}/gnuplot-nox
 popd
 
 pushd build-x11
-%makeinstall_std
+%make_install
 popd
 
 pushd gnuplot-mode.%{modeversion} && {
