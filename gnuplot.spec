@@ -22,7 +22,6 @@ BuildRequires:	tetex-latex
 BuildRequires:	latex-picins
 BuildRequires:	latex2html
 BuildRequires:	texlive-latex-bin
-BuildRequires:  gd-devel
 BuildRequires:  giflib-devel
 BuildRequires:	readline-devel
 BuildRequires:	cmake(ECM)
