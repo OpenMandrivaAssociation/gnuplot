@@ -1,6 +1,8 @@
+removed_sources:
+  gnuplot-5.2.2.tar.gz: fc39158851f39e48136d2bdd3f753bf46a99965c
 sources:
+  gnuplot-5.2.5.tar.gz: 6c0e43968ec19f813241b91cbcf15e44f6ad5c73
   gnuplot-mode.0.6.0.tar.bz2: 19818c7e34332a435fd9cc8a3ffd15aeae41a312
   gnuplot.16.png: 7c88dbeba5a37cc8a141f20323126e42925804fa
   gnuplot.32.png: 8a853ff5ea58cb6d99d991650a110d7bbafe16f4
   gnuplot.48.png: e5a8d860cb4335419a9a66c346eb29a7daf17b79
-  gnuplot-5.2.2.tar.gz: fc39158851f39e48136d2bdd3f753bf46a99965c
