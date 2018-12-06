@@ -15,6 +15,7 @@ Source12:	%{name}.32.png
 Source13:	%{name}.48.png
 Patch0:		gnuplot-4.0.0-emacs-mode--disable-f9.patch
 
+BuildRequires:	fontconfig
 BuildRequires:	emacs-bin
 BuildRequires:  texinfo
 BuildRequires:	texlive-epstopdf
