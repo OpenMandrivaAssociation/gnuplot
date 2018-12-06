@@ -105,7 +105,7 @@ This package provides the additional documentation.
 
 %prep
 %setup -q -a 1
-%autopatch -p1
+%apply_patches
 
 perl -pi -e 's|(^\s*)mkinstalldirs\s|$1./mkinstalldirs |' gnuplot-mode.%{modeversion}/Makefile.in
 # Non-free stuff. Ouch. -- Geoff
@@ -114,6 +114,7 @@ rm -f demo/prob.dem demo/prob2.dem
 %build
 export CFLAGS="%{optflags} -fno-fast-math"
 export CONFIGURE_TOP=..
+export CXX="%__cxx -std=gnu++11"
 
 mkdir build-nox
 pushd build-nox
