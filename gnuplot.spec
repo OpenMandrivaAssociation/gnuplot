@@ -2,13 +2,13 @@
 
 Summary:	A program for plotting mathematical expressions and data
 Name:		gnuplot
-Version:	5.2.5
+Version:	5.2.7
 Release:	1
 License:	Freeware-like
 Group:		Sciences/Other
 Url:		http://www.gnuplot.info/
 Source0:	http://downloads.sourceforge.net/project/gnuplot/%{name}/%{version}/%{name}-%{version}.tar.gz
-Source1:	http://cars9.uchicago.edu/~ravel/software/gnuplot-mode/gnuplot-mode.%{modeversion}.tar.bz2
+Source1:	http://cars9.uchicago.edu/~ravel/software/gnuplot-mode/gnuplot-mode.%{modeversion}.tar.gz
 Source2:	http://www.gnuplot.info/faq/faq.html
 Source11:	%{name}.16.png
 Source12:	%{name}.32.png
