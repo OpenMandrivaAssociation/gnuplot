@@ -106,7 +106,7 @@ This package provides the additional documentation.
 
 %prep
 %setup -q -a 1
-%apply_patches
+%autopatch -p1
 
 perl -pi -e 's|(^\s*)mkinstalldirs\s|$1./mkinstalldirs |' gnuplot-mode.%{modeversion}/Makefile.in
 # Non-free stuff. Ouch. -- Geoff
