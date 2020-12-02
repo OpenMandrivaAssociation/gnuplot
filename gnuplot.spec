@@ -2,7 +2,7 @@
 
 Summary:	A program for plotting mathematical expressions and data
 Name:		gnuplot
-Version:	5.2.7
+Version:	5.4.1
 Release:	1
 License:	Freeware-like
 Group:		Sciences/Other
@@ -169,13 +169,6 @@ pushd gnuplot-mode.%{modeversion} && {
     install -m 644 dotemacs %{buildroot}%{_sysconfdir}/emacs/site-start.d/%{name}.el
 } && popd
 
-# Copy back from build dir to be able to package those files
-pushd build-nox
-mv docs/gnuplot.pdf ../docs/
-#mv docs/gnuplot.ps ../docs/
-#mv docs/gpcard.ps ../docs/
-popd
-
 # menu
 
 mkdir -p %{buildroot}%{_datadir}/applications
@@ -211,7 +204,7 @@ mv texmf-local texmf-dist
 %{_libexecdir}/gnuplot/%(echo %{version}|cut -d. -f1-2)/gnuplot_qt
 
 %files nox
-%doc Copyright faq.html
+%doc Copyright
 %doc README
 %doc NEWS
 %{_bindir}/gnuplot-nox
