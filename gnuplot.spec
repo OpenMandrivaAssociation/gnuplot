@@ -1,5 +1,10 @@
 %define	modeversion 0.6.0
 
+# Work around _Float32 issue
+%ifarch x86_64
+%global optflags %{optflags} -O3
+%endif
+
 Summary:	A program for plotting mathematical expressions and data
 Name:		gnuplot
 Version:	5.4.3
