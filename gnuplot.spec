@@ -7,8 +7,8 @@
 
 Summary:	A program for plotting mathematical expressions and data
 Name:		gnuplot
-Version:	5.4.8
-Release:	2
+Version:	5.4.9
+Release:	1
 License:	Freeware-like
 Group:		Sciences/Other
 Url:		http://www.gnuplot.info/
