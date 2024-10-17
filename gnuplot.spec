@@ -11,7 +11,7 @@ Version:	5.4.10
 Release:	1
 License:	Freeware-like
 Group:		Sciences/Other
-Url:		http://www.gnuplot.info/
+Url:		https://www.gnuplot.info/
 Source0:	http://downloads.sourceforge.net/project/gnuplot/%{name}/%{version}/%{name}-%{version}.tar.gz
 Source1:	http://cars9.uchicago.edu/~ravel/software/gnuplot-mode/gnuplot-mode.%{modeversion}.tar.gz
 Source2:	http://www.gnuplot.info/faq/faq.html
