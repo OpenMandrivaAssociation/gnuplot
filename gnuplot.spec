@@ -7,7 +7,7 @@
 
 Summary:	A program for plotting mathematical expressions and data
 Name:		gnuplot
-Version:	5.4.10
+Version:	6.0.1
 Release:	1
 License:	Freeware-like
 Group:		Sciences/Other
@@ -31,12 +31,12 @@ BuildRequires:	texlive-latex-bin
 BuildRequires:  giflib-devel
 BuildRequires:	readline-devel
 BuildRequires:	cmake(ECM)
-BuildRequires:	cmake(Qt5Core)
-BuildRequires:	cmake(Qt5Gui)
-BuildRequires:	cmake(Qt5Widgets)
-BuildRequires:	cmake(Qt5Network)
-BuildRequires:	cmake(Qt5Svg)
-BuildRequires:	cmake(Qt5PrintSupport)
+BuildRequires:	cmake(Qt6Core)
+BuildRequires:	cmake(Qt6Gui)
+BuildRequires:	cmake(Qt6Widgets)
+BuildRequires:	cmake(Qt6Network)
+BuildRequires:	cmake(Qt6Svg)
+BuildRequires:	cmake(Qt6PrintSupport)
 BuildRequires:  pkgconfig(cairo)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(lua)
@@ -120,7 +120,6 @@ rm -f demo/prob.dem demo/prob2.dem
 %build
 export CFLAGS="%{optflags} -fno-fast-math"
 export CONFIGURE_TOP=..
-export CXX="%__cxx -std=gnu++11"
 
 mkdir build-nox
 pushd build-nox
@@ -135,7 +134,7 @@ pushd build-nox
 %make_build -C src/
 # building docs with parallel make
 # fails on a 32-thread box
-%make_build -j1 -C docs/ pdf
+%make_build -j1 -C docs/ info
 popd
 
 mkdir build-x11
@@ -145,7 +144,7 @@ pushd build-x11
 	--with-png \
 	--without-linux-vga \
 	--disable-wxwidgets \
-	--with-qt=qt5
+	--with-qt=qt6
 %make_build
 popd
 
