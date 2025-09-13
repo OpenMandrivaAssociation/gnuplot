@@ -8,7 +8,7 @@
 Summary:	A program for plotting mathematical expressions and data
 Name:		gnuplot
 Version:	6.0.3
-Release:	1
+Release:	2
 License:	Freeware-like
 Group:		Sciences/Other
 Url:		https://www.gnuplot.info/
@@ -48,6 +48,7 @@ BuildRequires:	pkgconfig(pango)
 BuildRequires:	pkgconfig(pangocairo)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(gdlib)
+BuildRequires:	pkgconfig(libcerf)
 Requires:	gnuplot-nox
 Suggests:	gnuplot-mode
 Suggests:	gnuplot-doc
