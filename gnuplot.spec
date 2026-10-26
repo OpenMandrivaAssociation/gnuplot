@@ -7,7 +7,7 @@
 
 Summary:	A program for plotting mathematical expressions and data
 Name:		gnuplot
-Version:		6.0.4
+Version:		6.0.6
 Release:		1
 License:		Freeware-like
 Group:		Sciences/Other
@@ -22,14 +22,12 @@ Source13:	%{name}.48.png
 Patch0:		gnuplot-6.0.4-fix-test-data-building.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool-base
 BuildRequires:	locales-extra-charsets
 BuildRequires:	fontconfig
 BuildRequires:	emacs-bin
 BuildRequires:	latex2html
 BuildRequires:	latex-picins
 BuildRequires:	make
-BuildRequires:	slibtool
 BuildRequires:	texinfo
 BuildRequires:	texlive-epstopdf
 BuildRequires:	texlive-latex-bin
